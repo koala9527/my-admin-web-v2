@@ -9,3 +9,6 @@ services:
     ports:
       - "8104:80"
     restart: always
+    deploy:
+      update_config:
+        order: start-first
