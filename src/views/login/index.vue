@@ -50,7 +50,7 @@
             v-model:value="loginInfo.captcha"
             class="h-40 items-center"
             palceholder="请随意输入验证码"
-            :maxlength="4"
+            :maxlength="6"
             @keydown.enter="handleLogin()"
           >
             <template #prefix>
