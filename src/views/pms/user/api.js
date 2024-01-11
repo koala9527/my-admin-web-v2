@@ -13,7 +13,7 @@ export default {
   read: (params = {}) => request.get('/admin/user/list', { params }),
   update: (data) => request.patch(`/user/${data.id}`, data),
   delete: (id) => request.delete(`/user/${id}`),
-  resetPwd: (id, data) => request.patch(`/user/password/reset/${id}`, data),
+  resetPwd: (id, data) => request.patch(`/admin/user/password_reset`, data),
 
   getAllRoles: () => request.get('/role?enable=1'),
 }
