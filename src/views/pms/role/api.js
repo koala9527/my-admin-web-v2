@@ -16,6 +16,6 @@ export default {
 
   getAllPermissionTree: () => request.get('/admin/permission/tree'),
   getAllUsers: (params = {}) => request.get('/admin/user/list', { params }),
-  addRoleUsers: (roleId, data) => request.patch(`/role/users/add/${roleId}`, data),
+  addRoleUsers: (roleId, data) => request.patch(`/admin/role/add/${roleId}`, data),
   removeRoleUsers: (roleId, data) => request.patch(`/role/users/remove/${roleId}`, data),
 }
