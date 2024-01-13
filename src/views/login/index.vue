@@ -152,7 +152,7 @@ const loading = ref(false)
 async function handleLogin(isQuick) {
   const { username, password, captcha } = loginInfo.value
   if (!username || !password) return $message.warning('请输入用户名和密码')
-  if (!isQuick && !captcha) return $message.warning('请随意输入验证码')
+  if (!isQuick && !captcha) return $message.warning('请输入验证码')
   try {
     loading.value = true
     $message.loading('正在验证，请稍后...', { key: 'login' })

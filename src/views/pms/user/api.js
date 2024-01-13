@@ -11,7 +11,7 @@ import { request } from '@/utils'
 export default {
   create: (data) => request.post('/admin/user/add', data),
   read: (params = {}) => request.get('/admin/user/list', { params }),
-  update: (data) => request.post(`/admin/role/edit?userId=${data.id}`, data),
+  update: (data) => request.post(`/admin/user/edit?userId=${data.id}`, data),
   delete: (id) => request.post(`/admin/user/delete?userId=${id}`),
   resetPwd: (id, data) => request.post(`/admin/user/password_reset`, data),
 
