@@ -1,0 +1,24 @@
+stages:
+  - build #任务阶段。只写了一个build阶段
+
+# cache:
+#  key: nodemodules-$CI_COMMIT_REF_NAME
+#  paths:
+#   - node_modules/
+
+build_develop:
+  stage: build #指定这个build_develop任务在build阶段
+  # cache:
+  #   key: nodemodules-$CI_COMMIT_REF_NAME
+  #   paths:
+  #   - node_modules/
+
+  script:
+    - cp -rf ./ /home/jijiwaiwai/my-project/my-admin-web-v2
+    - cd /home/jijiwaiwai/my-project/my-admin-web-v2
+    - docker-compose build
+    - docker-compose up -d --force-recreate #重启Docker的Nginx容器，这时候前端的所有的静态文件都是新的了
+  only:
+    - develop # 指定只在master分支执行这个任务。
+  tags:
+    - n5105 #指定执行任务的runner,安装runner的时候会提示填写runner的标签（tag）

@@ -23,7 +23,7 @@
         <p class="mt-28 text-14 opacity-60">一个人几乎可以在任何他怀有无限热忱的事情上成功。</p>
         <p class="mt-12 text-right text-12 opacity-40">—— 查尔斯·史考伯</p>
       </n-card>
-      <n-card class="ml-12 w-70%" title="✨ 欢迎使用 Vue Naive Admin 2.0">
+      <n-card class="ml-12 w-70%" title="✨ 欢迎使用 歪比巴卜 Admin 2.0">
         <template #header-extra>
           <a
             class="text-14 text-primary text-highlight hover:underline hover:opacity-80"

@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/zclzone/vue-naive-admin">
-    <img alt="Vue Naive Admin Logo" width="200" src="./src/assets/images/logo.png">
+    <img alt="Logo" width="200" src="./src/assets/images/logo.png">
   </a>
 </p>
 <p align="center">
@@ -8,11 +8,11 @@
 </p>
 
 ## 简介
-Vue Naive Admin 是一款极简风格的后台管理模板，包含前后端解决方案，前端使用 Vite + Vue3 + Pinia + Unocss，后端使用 Nestjs + TypeOrm + MySql，简单易用，赏心悦目，历经十几次重构和细节打磨，诚意满满！！
+歪比巴卜 Admin 是一款极简风格的后台管理模板，包含前后端解决方案，前端使用 Vite + Vue3 + Pinia + Unocss，后端使用 Nestjs + TypeOrm + MySql，简单易用，赏心悦目，历经十几次重构和细节打磨，诚意满满！！
 
 ## 设计理念
 
-Vue Naive Admin 2022年2月开始开源，从 1.0 到现在的 2.0，一直秉持着`简单即正义`的理念，旨在帮助中小企业、在校大学生及个人开发者快速上手开发后台管理项目，为了降低使用者的学习成本，没有使用看似主流的 TypeScript（前端），这也使得 Vue Naive Admin 成为了市面上少有的 `使用 JavaScript 的 Vue3 后台管理模板`，而且还算优秀，得到了大量朋友的认可和喜爱。
+歪比巴卜 Admin 2022年2月开始开源，从 1.0 到现在的 2.0，一直秉持着`简单即正义`的理念，旨在帮助中小企业、在校大学生及个人开发者快速上手开发后台管理项目，为了降低使用者的学习成本，没有使用看似主流的 TypeScript（前端），这也使得 歪比巴卜 Admin 成为了市面上少有的 `使用 JavaScript 的 Vue3 后台管理模板`，而且还算优秀，得到了大量朋友的认可和喜爱。
 
 ## 特性
 
@@ -46,7 +46,7 @@ Vue Naive Admin 2022年2月开始开源，从 1.0 到现在的 2.0，一直秉�
 
 ## Nestjs 后端
 
-Vue Naive Admin 提供一套后端代码，技术栈使用 Nestjs + TypeOrm + MySql，内置 JWT、RABC及模板所需的一些基础接口。
+歪比巴卜 Admin 提供一套后端代码，技术栈使用 Nestjs + TypeOrm + MySql，内置 JWT、RABC及模板所需的一些基础接口。
 
 *后续可能会提供 Java 版和 Go 版的，但由于精力有限，欢迎感兴趣的大佬基于前端提供对接好的后端项目，当然，并不局限于 Java 和 Go，已对接的后端项目会展示到仓库的 README 和 官方文档中*
 
@@ -64,5 +64,5 @@ Vue Naive Admin 提供一套后端代码，技术栈使用 Nestjs + TypeOrm + My
 
 ## 其他已对接本项目的后端项目
 
-- [isme-java-serve](https://github.com/DHBin/isme-java-serve): 一个轻量级的Java后端服务，基于SpringBoot、MybatisPlus、SaToken、MapStruct等实现，已对接 Vue Naive Admin 2.0。
+- [isme-java-serve](https://github.com/DHBin/isme-java-serve): 一个轻量级的Java后端服务，基于SpringBoot、MybatisPlus、SaToken、MapStruct等实现，已对接 歪比巴卜 Admin 2.0。
 

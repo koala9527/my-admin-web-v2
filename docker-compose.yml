@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  my-admin-web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: my-admin-web-v2
+    ports:
+      - "8104:80"
+    restart: always
+    deploy:
+      update_config:
+        order: start-first
