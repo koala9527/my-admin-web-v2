@@ -75,7 +75,7 @@ const columns = [
   {
     title: '头像',
     key: 'avatar',
-    width: 80,
+    width: 100,
     render: ({ avatar }) =>
       h(NAvatar, {
         size: 'medium',
@@ -87,7 +87,7 @@ const columns = [
   {
     title: '状态',
     key: 'status',
-    width: 120,
+    width: 80,
     render: (row) =>
       h(
         NSwitch,
