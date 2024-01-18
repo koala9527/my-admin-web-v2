@@ -10,4 +10,5 @@ import { request } from '@/utils'
 
 export default {
   userList: (params = {}) => request.get('/admin/applet_user/list', { params }),
+  update: (params = {}) => request.get('/admin/applet_user/edit', { params }),
 }
