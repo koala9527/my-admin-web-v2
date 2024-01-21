@@ -9,6 +9,7 @@
 import { request } from '@/utils'
 
 export default {
-  userList: (params = {}) => request.get('/admin/applet/user/list', { params }),
-  update: (params = {}) => request.get('/admin/applet/user/edit', { params }),
+  userList: (params = {}) => request.get('/admin/applet/applet/list', { params }),
+  doCreate: (data) => request.post('/admin/applet/applet/create', data),
+  doUpdate: (data) => request.post('/admin/applet/applet/edit', data),
 }
