@@ -1,5 +1,6 @@
 stages:
   - build #任务阶段。只写了一个build阶段
+  - deploy
 
 # cache:
 #  key: nodemodules-$CI_COMMIT_REF_NAME
@@ -22,3 +23,39 @@ build_develop:
     - develop # 指定只在master分支执行这个任务。
   tags:
     - n5105 #指定执行任务的runner,安装runner的时候会提示填写runner的标签（tag）
+
+deploy_develop_docker:
+  stage: deploy
+  script:
+    - echo 'niubi'
+  #    - docker exec my-applet php bin/hyperf.php migrate
+  after_script:
+    - 'curl "https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=593fbf9b-53fe-440d-8d56-1744bde943d3"  -H "Content-Type: application/json"  -d "{ \"msgtype\": \"text\", \"text\": { \"content\": \"my-admin-web-v2 develop ${CI_COMMIT_MESSAGE}  已发布\" } }" '
+  only:
+    - develop
+  tags:
+    - n5105
+
+build_docker:
+  stage: build
+  script:
+    - docker login -u koala95271 registry.cn-shenzhen.aliyuncs.com -p jijiwaiwai123...
+    - docker build . -t $PROJECT_NAME
+    - docker tag $PROJECT_NAME $REGISTRY_URL/$PROJECT_NAME:$CI_COMMIT_REF_NAME
+    - docker tag $PROJECT_NAME $REGISTRY_URL/$PROJECT_NAME:latest
+    - docker push $REGISTRY_URL/$PROJECT_NAME:$CI_COMMIT_REF_NAME
+    - docker push $REGISTRY_URL/$PROJECT_NAME:latest
+  only:
+    - main
+  tags:
+    - tencent-master
+
+deploy_docker:
+  stage: deploy
+  script:
+    - cd /home/tuwei/my-master-config/my-admin-web-v2
+    - sh update.sh
+  only:
+    - main
+  tags:
+    - tencent-master
